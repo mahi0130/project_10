@@ -20,7 +20,7 @@ import com.rays.service.CourseServiceInt;
 import com.rays.service.StudentServiceInt;
 import com.rays.service.SubjectServiceInt;
 /**
- * Mahi Singh 
+ * @author Mahi Singh
  *
  */
 @RestController

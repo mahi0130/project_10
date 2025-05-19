@@ -555,7 +555,7 @@
     <bindings xmi:id="_qb3t4sEXEe-axKrfuINe_w" keySequence="ALT+SHIFT+X B" command="_qawTqMEXEe-axKrfuINe_w"/>
     <bindings xmi:id="_qb3t48EXEe-axKrfuINe_w" keySequence="ALT+SHIFT+X E" command="_qatQYMEXEe-axKrfuINe_w"/>
     <bindings xmi:id="_qb3t5MEXEe-axKrfuINe_w" keySequence="ALT+SHIFT+X O" command="_qaspTcEXEe-axKrfuINe_w"/>
-    <bindings xmi:id="_qb3t5cEXEe-axKrfuINe_w" keySequence="ALT+SHIFT+X Q" command="_qamit8EXEe-axKrfuINe_w"/>
+    <bindings xmi:id="_qb3t5cEXEe-axKrfuINe_w" keySequence="ALT+SHIFT+X Q" command="_qMahi8EXEe-axKrfuINe_w"/>
     <bindings xmi:id="_qb3t5sEXEe-axKrfuINe_w" keySequence="ALT+SHIFT+X P" command="_qavsq8EXEe-axKrfuINe_w"/>
     <bindings xmi:id="_qb5jEMEXEe-axKrfuINe_w" keySequence="ALT+SHIFT+X R" command="_qaq0BMEXEe-axKrfuINe_w"/>
     <bindings xmi:id="_qb5jEcEXEe-axKrfuINe_w" keySequence="ALT+SHIFT+X T" command="_qapmBsEXEe-axKrfuINe_w"/>
@@ -2104,11 +2104,11 @@
   <commands xmi:id="_qamiscEXEe-axKrfuINe_w" elementId="org.eclipse.wst.xml.ui.previousSibling" commandName="Previous Sibling" description="Go to Previous Sibling" category="_qahqEMEXEe-axKrfuINe_w"/>
   <commands xmi:id="_qamissEXEe-axKrfuINe_w" elementId="org.eclipse.egit.ui.RepositoriesViewConfigurePush" commandName="Configure Push..." category="_qaiRM8EXEe-axKrfuINe_w"/>
   <commands xmi:id="_qamis8EXEe-axKrfuINe_w" elementId="org.eclipse.ui.edit.findIncrementalReverse" commandName="Incremental Find Reverse" description="Incremental find reverse" category="_qahqEMEXEe-axKrfuINe_w"/>
-  <commands xmi:id="_qamitMEXEe-axKrfuINe_w" elementId="org.eclipse.epp.mpc.ui.command.importFavoritesWizard" commandName="Import Marketplace Favorites" description="Import another user's Marketplace Favorites List" category="_qahqK8EXEe-axKrfuINe_w">
-    <parameters xmi:id="_qamitcEXEe-axKrfuINe_w" elementId="favoritesUrl" name="favoritesUrl"/>
+  <commands xmi:id="_qMahiMEXEe-axKrfuINe_w" elementId="org.eclipse.epp.mpc.ui.command.importFavoritesWizard" commandName="Import Marketplace Favorites" description="Import another user's Marketplace Favorites List" category="_qahqK8EXEe-axKrfuINe_w">
+    <parameters xmi:id="_qMahicEXEe-axKrfuINe_w" elementId="favoritesUrl" name="favoritesUrl"/>
   </commands>
-  <commands xmi:id="_qamitsEXEe-axKrfuINe_w" elementId="org.eclipse.wst.jsdt.ui.edit.text.java.introduce.factory" commandName="Introduce Factory" description="Introduce a factory function to encapsulate invocation of the selected constructor" category="_qahqLMEXEe-axKrfuINe_w"/>
-  <commands xmi:id="_qamit8EXEe-axKrfuINe_w" elementId="org.eclipse.ant.ui.antShortcut.run" commandName="Run Ant Build" description="Run Ant Build" category="_qahqH8EXEe-axKrfuINe_w"/>
+  <commands xmi:id="_qMahisEXEe-axKrfuINe_w" elementId="org.eclipse.wst.jsdt.ui.edit.text.java.introduce.factory" commandName="Introduce Factory" description="Introduce a factory function to encapsulate invocation of the selected constructor" category="_qahqLMEXEe-axKrfuINe_w"/>
+  <commands xmi:id="_qMahi8EXEe-axKrfuINe_w" elementId="org.eclipse.ant.ui.antShortcut.run" commandName="Run Ant Build" description="Run Ant Build" category="_qahqH8EXEe-axKrfuINe_w"/>
   <commands xmi:id="_qamiuMEXEe-axKrfuINe_w" elementId="org.eclipse.wst.jsdt.ui.correction.convertAnonymousToLocal.assist" commandName="Quick Assist - Convert anonymous to local class" description="Invokes quick assist and selects 'Convert anonymous to local class'" category="_qahqFsEXEe-axKrfuINe_w"/>
   <commands xmi:id="_qamiucEXEe-axKrfuINe_w" elementId="org.eclipse.egit.ui.team.stash.apply" commandName="Apply Stashed Changes" category="_qaiRM8EXEe-axKrfuINe_w"/>
   <commands xmi:id="_qamiusEXEe-axKrfuINe_w" elementId="org.eclipse.jdt.debug.ui.commands.Inspect" commandName="Inspect" description="Inspect result of evaluating selected text" category="_qahqH8EXEe-axKrfuINe_w"/>

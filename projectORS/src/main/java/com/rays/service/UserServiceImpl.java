@@ -23,7 +23,7 @@ import com.rays.dto.UserDTO;
  * 
  * If unchecked exception is propagated from a method then transaction is rolled
  * back.
- *   
+ * 
  * Default propagation value is Propagation.REQUIRED and readOnly = false
  * 
  * Mahi Singh
@@ -60,7 +60,7 @@ public class UserServiceImpl extends BaseServiceImpl<UserDTO, UserDAOInt> implem
 			UserContext userContext = new UserContext(dto);
 			if (password.equals(dto.getPassword())) {
 				dto.setLastLogin(new Timestamp((new Date()).getTime()));
-				
+
 				dto.setUnsucessfullLoginAttempt(0);
 				update(dto, userContext);
 				return dto;
@@ -122,10 +122,8 @@ public class UserServiceImpl extends BaseServiceImpl<UserDTO, UserDAOInt> implem
 
 		HashMap<String, String> params = new HashMap<String, String>();
 		params.put("user", dto.getFirstName() + " " + dto.getLastName());
-		System.out.println(dto.getFirstName() + dto.getLastName());
 
 		params.put("password", dto.getPassword());
-		System.out.println(dto.getPassword());
 		emailDTO.setMessageCode("U-FP", params);
 
 		emailService.send(emailDTO, null);
@@ -144,7 +142,7 @@ public class UserServiceImpl extends BaseServiceImpl<UserDTO, UserDAOInt> implem
 		userContext.setOrgId(0L);
 		userContext.setOrgName("root");
 
-		Long id =add(dto, userContext);
+		Long id = add(dto, userContext);
 
 		dto.setId(id);
 		System.out.println("ID :: " + dto.getId());

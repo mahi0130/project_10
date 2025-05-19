@@ -169,7 +169,6 @@ deleteMany(){
     }else{
       this.form.message = "Select Atleast One Record";
         this.form.error = true;
-    console.log('No record(s) for delete ')
   }
   this.isMasterSel = false ;  
   console.log('delete Many Records ends ');

@@ -30,7 +30,6 @@ export class HttpServiceService {
   get(endpoint, callback) {
 
     return this.httpClient.get(endpoint, { withCredentials: true }).subscribe((data) => {
-      console.log('Data :: ' + data);
       callback(data);
 
     }, error => {

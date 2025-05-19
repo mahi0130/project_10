@@ -48,7 +48,7 @@ import net.sf.jasperreports.engine.JasperReport;
 /**
  * The Class JasperCtl.
  * 
- * Mahi Singh
+ * @author Mahi Singh
  */
 
 @Transactional

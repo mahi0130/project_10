@@ -41,7 +41,6 @@ public abstract class BaseServiceImpl<T extends BaseDTO, D extends BaseDAOInt<T>
 
 	@Transactional(readOnly = true)
 	public List<T> search(T dto, int pageNo, int pageSize, UserContext userContext) {
-		System.out.println("Search run in Baseservice......Amit");
 		return baseDao.search(dto, pageNo, pageSize, userContext);
 	}
 	

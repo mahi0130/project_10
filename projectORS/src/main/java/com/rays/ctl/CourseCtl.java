@@ -18,7 +18,7 @@ import com.rays.service.CourseServiceInt;
 
 
 /**
- * Mahi Singh 
+ *@author Mahi Singh 
  *
  */
 @RestController

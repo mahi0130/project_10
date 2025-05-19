@@ -33,7 +33,7 @@ export class UserComponent extends BaseCtl {
       console.log("form data going to be submit" , res.result.data);
       _self.form.data.id = res.result.data;
       if (_self.fileToUpload) {
-        console.log('Amit');
+        console.log('mahi');
         _self.myFile();
       }
       if (res.success) {

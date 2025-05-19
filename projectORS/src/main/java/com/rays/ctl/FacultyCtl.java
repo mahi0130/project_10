@@ -25,7 +25,7 @@ import com.rays.service.SubjectServiceInt;
 
 
 /**
- * Mahi Singh 
+ * @author Mahi Singh
  *
  */
 @RestController

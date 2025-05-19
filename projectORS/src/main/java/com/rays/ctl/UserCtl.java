@@ -64,7 +64,6 @@ public class UserCtl extends BaseCtl<UserForm, UserDTO, UserServiceInt> {
 
 	@GetMapping("/preload")
 	public ORSResponse preload() {
-		System.out.println("inside preload amit in userctl");
 		ORSResponse res = new ORSResponse(true);
 		RoleDTO dto = new RoleDTO();
 		dto.setStatus(RoleDTO.ACTIVE);
@@ -214,30 +213,23 @@ public class UserCtl extends BaseCtl<UserForm, UserDTO, UserServiceInt> {
 		System.out.println("User ID id --------------Mahi Singh" + userId);
 
 		UserDTO userDTO = baseService.findById(userId, userContext);
-		System.out.println("Amit>>>>>>>>>>>>>..."+userId);
+		System.out.println("Mahi>>>>>>>>>>>>>..."+userId);
 
 		AttachmentDTO doc = new AttachmentDTO(file);
 
 		doc.setDescription("Profile picture");
-		System.out.println(doc.getDescription() + "description");
 
 		doc.setPath(req.getServletPath());
-		System.out.println(doc.getPath() + "path-----rahul");
 
 		doc.setUserId(userId);
-		System.out.println(doc.getUserId() + "id-----rahul");
 
 		if (userDTO.getImageId() != null && userDTO.getImageId() > 0) {
 			doc.setId(userDTO.getImageId());
 		}
-		System.out.println("before calling save");
 
 		Long imageId = attachmentService.save(doc, userContext);
 		
-		System.out.println("Bansal>>>>>>>>>>>"+imageId);
-
-		System.out.println("after save");
-
+		
 		// Update new image id
 
 		if (userDTO.getImageId() == null || userDTO.getImageId() == 0) {
@@ -280,7 +272,7 @@ public class UserCtl extends BaseCtl<UserForm, UserDTO, UserServiceInt> {
 				out.write(attachmentDTO.getDoc());
 				out.close();
 
-				System.out.println("Profile pic......amit");
+				System.out.println("Profile pic......Mahi");
 			} else {
 				response.getWriter().write("ERROR: File not found");
 			}

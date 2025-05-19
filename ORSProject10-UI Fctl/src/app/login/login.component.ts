@@ -98,7 +98,8 @@ export class LoginComponent implements OnInit {
 
     var _self = this;
     this.form.error = false;
-    const requestedUrl = this.httpService.userparams.url;//to get the URI
+    const 
+    requestedUrl = this.httpService.userparams.url;//to get the URI
     console.log('signIn----', this.form);
     this.httpService.post(this.endpoint + "/login", this.form, function (res) {
 

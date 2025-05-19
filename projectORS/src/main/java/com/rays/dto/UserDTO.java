@@ -17,7 +17,7 @@ import com.rays.common.BaseDTO;
  */
 
 /**
- * @author Amit
+ * @author Mahi
  *
  */
 
@@ -244,7 +244,7 @@ public class UserDTO extends BaseDTO {
 		this.accessTimeTo = accessTimeTo;
 	}
 
-	public String getKey() {
+	public String getKey() { 
 		return id + "";
 	}
 

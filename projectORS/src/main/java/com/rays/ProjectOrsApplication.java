@@ -29,7 +29,8 @@ public class ProjectOrsApplication extends SpringBootServletInitializer {
 	@Autowired
 	FrontCtl frontCtl;
 
-	public static void main(String[] args) {
+	
+	public static void main(String[] args) {  
 		SpringApplication.run(ProjectOrsApplication.class, args);
 
 	}

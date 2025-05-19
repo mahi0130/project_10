@@ -6,7 +6,7 @@ import { EndpointServiceService } from './endpoint-service.service';
 
 @Injectable({
   providedIn: 'root'
-})
+})  
 
 export class ServiceLocatorService {
 

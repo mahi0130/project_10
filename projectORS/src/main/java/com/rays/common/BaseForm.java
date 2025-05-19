@@ -3,7 +3,7 @@ package com.rays.common;
 import java.lang.reflect.Method;
 
 /**
- * Contains generic attributes of a form. It is extended by all form beans. Amit
+ * Contains generic attributes of a form. It is extended by all form beans. Mahi
  * Bansal
  */
 

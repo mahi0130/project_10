@@ -109,17 +109,13 @@ public abstract class BaseDAOImpl<T extends BaseDTO> implements BaseDAOInt<T> {
 		if (dto.isGroupFilter()) {
 			whereClause.add(builder.equal(qRoot.get("orgId"), dto.getOrgId()));
 		}
-		System.out.println(" isgroup skipped......amit");
 		cq.where(whereClause.toArray(new Predicate[whereClause.size()]));
 
 		List<Order> orderBys = getOrderByClause(dto, builder, qRoot);
 
-		System.out.println("after getOrder By clause........amit");
 		cq.orderBy(orderBys.toArray(new Order[orderBys.size()]));
 
-		System.out.println("After order by clause.......amit ");
 		TypedQuery<T> query = entityManager.createQuery(cq);
-		System.out.println("createCriteria end here---....rahul");
 		return query;
 
 	}
@@ -135,13 +131,9 @@ public abstract class BaseDAOImpl<T extends BaseDTO> implements BaseDAOInt<T> {
 	protected abstract List<Predicate> getWhereClause(T dto, CriteriaBuilder builder, Root<T> qRoot);
 
 	public List search(T dto, int pageNo, int pageSize, UserContext userContext) {
-		System.out.println("BaseDao search run");
 
-		// System.out.println("Base DAO dto :: " + dto);
-		// System.out.println(userContext);
 		TypedQuery<T> query = createCriteria(dto, userContext);
 
-		System.out.println(" PAGE ->>>>>>>>>>>>>>>>" + pageNo + " --- " + pageSize);
 		if (pageSize > 0) {
 
 			query.setFirstResult(pageNo * pageSize);
@@ -191,9 +183,7 @@ public abstract class BaseDAOImpl<T extends BaseDTO> implements BaseDAOInt<T> {
 		dto.setOrgName(userContext.getOrgName());
 
 		populate(dto, userContext);
-		System.out.println("Dto start ");
-		System.out.println(dto);
-		System.out.println("before calling persist method in base dao......vipin");
+	
 		entityManager.persist(dto);
 
 		return dto.getId();
@@ -311,7 +301,7 @@ public abstract class BaseDAOImpl<T extends BaseDTO> implements BaseDAOInt<T> {
 	protected List<Order> getOrderByClause(T dto, CriteriaBuilder builder, Root<T> qRoot) {
 
 		// Apply Order by clause
-		System.out.println("baseDAO in getOrderByClause.......amit ");
+		System.out.println("baseDAO in getOrderByClause.......Mahi ");
 		LinkedHashMap<String, String> map = dto.orderBY();
 
 		List<Order> orderBys = new ArrayList<Order>();

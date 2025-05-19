@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 /**
  * Handles application propagated exceptions
+ * @author Mahi Singh
  * 
- * Mahi Singh 
  *
  */
 

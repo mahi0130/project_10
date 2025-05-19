@@ -35,7 +35,7 @@ import com.rays.service.UserServiceInt;
  * Login controller provides API for Sign Up, Sign In and Forgot password
  * operations
  * 
- * Mahi Singh
+ * @author Mahi Singh
  */
 @RestController
 @RequestMapping(value = "Auth")
@@ -106,7 +106,6 @@ public class LoginCtl extends BaseCtl<UserForm, UserDTO, UserServiceInt> {
 //			 session.setAttribute("userContext", context); 				
 
 			session.setAttribute("test", dto.getFirstName());
-			System.out.println("login id => " + session.getId());
 
 			res.setSuccess(true);
 			session.setAttribute("user", dto.getFirstName());
@@ -117,9 +116,7 @@ public class LoginCtl extends BaseCtl<UserForm, UserDTO, UserServiceInt> {
 			res.addResult("fname", dto.getFirstName());
 			res.addResult("lname", dto.getLastName());
 
-			/* System.out.println("jsessionid " + session.getId()); */
-			System.out.println("Before calling userDetail authenticate");
-
+		
 			return res;
 
 		}
@@ -227,16 +224,11 @@ public class LoginCtl extends BaseCtl<UserForm, UserDTO, UserServiceInt> {
 		dto.setEmail(form.getLogin());
 		dto.setGender(form.getGender());
 		dto.setDob(form.getDob());
-		System.out.println(form.getDob() + "--->>>>>");
 		dto.setPhone(form.getPhone());
 
-		System.out.println(dto.getPhone() + "phone-->>>>>");
 		dto.setPassword(form.getPassword());
-		System.out.println(dto.getPassword() + "Password--------->>>>>>");
 		dto.setStatus("Inactive");
-		System.out.println(form.getPhone() + "phone--->>s");
 		dto.setAlternateMobile(form.getAlternateMobile());
-		System.out.println(dto.getAlternateMobile() + "alternate phone--->");
 		dto.setRoleId(2L);
 
 		baseService.register(dto);

@@ -20,8 +20,7 @@ import com.rays.common.message.MessageDTO;
 import com.rays.common.message.MessageServiceInt;
 
 /**
- * Provides email services
- * Mahi Singh 
+ * Provides email services Mahi Singh
  */
 @Component
 public class EmailServiceImpl {
@@ -51,33 +50,22 @@ public class EmailServiceImpl {
 	 * @param ctx
 	 */
 	public void send(EmailDTO dto, UserContext ctx) {
-		System.out.println("send in emailService");
 		// Get message from database if message code is not null
 		if (dto.getMessageCode() != null) {
-			System.out.println(dto.getMessageCode()+"msg code in EmailService");
 			MessageDTO messageDTO = messageService.findByCode(dto.getMessageCode(), ctx);
-			System.out.println(messageDTO +"Received message dto");
 			// If message does not exist or message is active then return
 			if (messageDTO == null || "Inactive".equals(messageDTO.getStatus())) {
 				System.out.println("messageDTO null condition");
 				return;
 			}
-			System.out.println("-->>>>>>>>>>>>");
-			System.out.println(dto.getMessageParams()+"MSG PARAM");
-			System.out.println(messageDTO.getSubject(dto.getMessageParams())+"------>>");
 			dto.setSubject(messageDTO.getSubject(dto.getMessageParams()));
-			
-			
-			System.out.println(dto.getSubject()+"Subject");
+
 			dto.setBody(messageDTO.getBody(dto.getMessageParams()));
-			System.out.println(dto.getBody()+"Body");
-			
+
 			dto.setIsHTML("Y".equals(messageDTO.getHtml()));
-			System.out.println(dto.getIsHTML()+"HTML");
 
 		}
 
-		System.out.println(dto+"dto -----");
 
 		MimeMessage message = emailSender.createMimeMessage();
 
@@ -123,7 +111,7 @@ public class EmailServiceImpl {
 		}
 
 		new Thread(new Runnable() {
-			
+
 			public void run() {
 				System.out.println("inside run ");
 				emailSender.send(message);

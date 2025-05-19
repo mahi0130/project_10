@@ -86,7 +86,6 @@ public class UserDAOImpl extends BaseDAOImpl<UserDTO> implements UserDAOInt {
 		if (dto.getRoleId() != null && dto.getRoleId() > 0) {
 			RoleDTO roleDto = roleDao.findByPK(dto.getRoleId(), userContext);
 			dto.setRoleName(roleDto.getName());
-			System.out.println(dto.getRoleName() + "RoleName-------");
 		}
 		if (dto.getId() != null && dto.getId() > 0) {
 			UserDTO userData = findByPK(dto.getId(), userContext);

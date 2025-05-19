@@ -25,11 +25,7 @@ public class FrontCtl extends HandlerInterceptorAdapter {
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 
-		System.out.println("1111");
-
 		HttpSession session = request.getSession();
-
-		System.out.println("FrontCTl id => " + session.getId());
 
 		String path = request.getServletPath();
 
@@ -38,13 +34,12 @@ public class FrontCtl extends HandlerInterceptorAdapter {
 			System.out.println("2222");
 
 			if (session.getAttribute("user") == null) {
-				System.out.println("3333");
 				response.setContentType("application/json");
 				response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
 				response.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
 				response.setHeader("Access-Control-Allow-Credentials", "true");
 				response.setHeader("Access-Control-Allow-Methods", "GET,DELETE,OPTIONS,POST,PUT");
-				response.setHeader("Access-Control-Allow-Headers","*");
+				response.setHeader("Access-Control-Allow-Headers", "*");
 
 				PrintWriter out = response.getWriter();
 				out.print("{\"success\":\"false\",\"error\":\"OOPS! Your session has been expired\"}");

@@ -12,18 +12,21 @@ export class AuthService implements HttpInterceptor {
   
   intercept(req: HttpRequest<any>, next: HttpHandler) {
 
+    
     if (localStorage.getItem('fname')) {
       req = req.clone({
-        setHeaders: {
+        setHeaders: {       
         "withCredentials" : "true",
-        "name" : "Amit",
+        "name" : "Mahi",
           
         
         }
+        
       })
     }
         console.log(req.headers.get("Authorization")+"------------------->>>")
     return next.handle(req);
+    
 
   }
 
