@@ -32,14 +32,19 @@ import { MarksheetmeritListComponent } from "./marksheet/marksheetmerit-list.com
 import { GetmarksheetComponent } from "./marksheet/getmarksheet.component";
 import { ChangepasswordComponent } from "./user/changepassword.component";
 import { LoaderComponent } from './loader/loader.component';
-import { SpinnerComponent} from './spinner/spinner.component';
 import {MyprofileComponent} from './user/myprofile.component';
+
+import { StaffMemberComponent } from './staff-member/staff-member.component';
+import { StaffmemberlistComponent } from './staff-member/staffmemberlist.component';
+
+import { InventoryListComponent } from './inventory/inventory-list.component';
+import { InventoryComponent } from './inventory/inventory.component';
 
 const routes: Routes = [
     {
         path: '',
         redirectTo: 'dashboard',
-        pathMatch: 'full'
+        pathMatch: 'full'                          
     },
     {
         path: 'dashboard',
@@ -60,10 +65,7 @@ const routes: Routes = [
         component: LoginComponent
     },
    
-    {
-        path: 'spinner',
-        component: SpinnerComponent
-    },
+    
     {
         path: 'forgotpassword',
         component: ForgotPasswordComponent
@@ -172,21 +174,6 @@ const routes: Routes = [
       
     },
     {
-        path: 'course',
-        component: CourseComponent
-      
-    },
-    {
-        path: 'courselist',
-        component: CourseListComponent
-      
-    },
-    {
-        path :'course/:id',
-        component :CourseComponent
-      
-    },
-    {
 
         path:'faculty',
         component:FacultyComponent
@@ -245,7 +232,39 @@ const routes: Routes = [
         component : ChangepasswordComponent
       
 
-    }, 
+    },
+{
+    path: 'staff',
+    component: StaffMemberComponent
+},
+{
+path: 'staffList',
+component: StaffmemberlistComponent
+},
+{
+path: 'staff/:id',
+component: StaffMemberComponent
+
+},
+
+
+    
+     {
+        path: 'inventory',
+        component: InventoryComponent
+      
+    },
+     {
+        path: 'inventory/:id',
+        component: InventoryComponent
+      
+    },
+    {
+        path: 'inventory-list',
+        component: InventoryListComponent
+      
+    }
+
 
     
     

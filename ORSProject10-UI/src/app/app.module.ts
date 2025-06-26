@@ -48,10 +48,15 @@ import { ChangepasswordComponent } from "./user/changepassword.component";
 import { LoaderComponent } from "./loader/loader.component";
 import { NavbarComponent } from './navbar/navbar.component';
 
-import { SpinnerComponent } from './spinner/spinner.component';
 import { FooterComponent } from './footer/footer.component';
 import { MyprofileComponent } from './user/myprofile.component';
 import { AuthService } from './auth-service.service';
+import { StaffmemberlistComponent } from './staff-member/staffmemberlist.component';
+import { StaffMemberComponent } from './staff-member/staff-member.component';
+
+import { InventoryComponent } from './inventory/inventory.component';
+import { InventoryListComponent } from './inventory/inventory-list.component';
+
 
 
 // import { AuthService } from './auth.service';
@@ -97,9 +102,12 @@ export function myHttpLoader(http: HttpClient) {
     LoaderComponent,
     FileComponent,
     NavbarComponent,
-    SpinnerComponent,
     FooterComponent,
     MyprofileComponent,
+  StaffMemberComponent,
+     StaffmemberlistComponent,
+     InventoryComponent,
+     InventoryListComponent,
 
 
 
