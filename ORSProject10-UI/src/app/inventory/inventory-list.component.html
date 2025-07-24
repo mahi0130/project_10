@@ -31,15 +31,15 @@
                  placeholder="{{ 'Search supplierName' | translate }}">
         </div>
 
-        <div class="col-sm-2">
-          <select class="form-control" name="product" 
-                  [(ngModel)]="form.searchParams.product" 
-                  aria-label="ngSelected">
-            <option [ngValue]="" value="undefined">{{ 'Select Product' | translate }}</option>
-            <option *ngFor="let obj of form.preload.inlist" [value]="obj.key">{{ obj.value }}</option>
-          </select>
-        </div>
-
+          <div class="col-sm-2">
+        <select class="form-control" name="product" id="product"  [(ngModel)]="form.searchParams.product" style="cursor: pointer;">
+                  <option [ngValue]="" value="undefined">{{ 'Please product' | translate }}</option>
+                   <option value="leptop">{{'leptop' | translate }}</option>
+                <option value="Ac">{{'Ac' | translate }}</option>
+                <option value="Lcd">{{'Lcd' | translate }}</option>
+                <option value="Car">{{'Car' | translate }}</option>
+                </select>
+  </div>
         <div class="col-sm-2">
           <input type="date" class="form-control" 
                  [(ngModel)]="form.searchParams.lastUpdatedDate"
